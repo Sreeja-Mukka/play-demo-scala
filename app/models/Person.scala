@@ -42,3 +42,13 @@ class PersonDAO @Inject()(dbConfigProvider: DatabaseConfigProvider)(implicit ec:
     persons.filter(_.sno === sno).delete.map(_ => ())
   }
 }
+/*
+     db.run  executes the blocks
+     in the form of asynchronous task and
+     returns future objects
+
+     for executing the asynchronous task
+     concurrency execution context need
+     to be there as part of the current object cont
+
+*/

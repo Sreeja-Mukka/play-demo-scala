@@ -2,10 +2,10 @@
 FROM hseeberger/scala-sbt:11.0.13_1.6.1_2.13.7 as build
 
 # Set the working directory in the container
-WORKDIR /app
+WORKDIR app
 
 # Copy the current directory contents into the container at /app
-COPY . /app
+COPY . .
 
 # Compile and package the application
 RUN sbt clean compile stage
